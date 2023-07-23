@@ -22,8 +22,8 @@ title: All things Observability
 email: munibshah@munibshah.com
 description: >- # this means to ignore newlines until "baseurl:"
   This blog speaks about all things observability
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://observe.munibshah.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: themunibshah
 github_username: munibshah
 
