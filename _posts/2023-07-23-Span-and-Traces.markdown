@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Span vs Traces: Understanding Observability With a Car Journey Analogy"
+title: "Span vs Traces: with a Car Analogy"
 date: 2023-07-23 14:37:19 -0700
 categories: Observability
 ---
 
-# Span vs Traces: Understanding Observability With a Car Journey Analogy
+# Span vs Traces: with a Car Analogy
 
 Hi there! Let's delve into two crucial concepts in the world of observability: Span and Traces. If you've been finding it difficult to wrap your head around these terms, you're not alone! To make it more relatable, we'll use a car journey as an analogy. Let's get started!
 

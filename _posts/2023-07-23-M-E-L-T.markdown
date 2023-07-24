@@ -13,7 +13,7 @@ Imagine you're driving from Point A to Point B. The entire journey you take repr
 
 Similarly, in a software system, a trace is the entire path that a transaction or request takes through various services from start to finish. Each of these individual actions (like starting the car or making a turn) are called "spans".
 
-### Example
+#### Example
 
 Let's equate this to a feature in your connected car, say, requesting for roadside assistance. This request might initiate a trace which includes spans like:
 
@@ -30,7 +30,7 @@ While driving, you often glance at your car's dashboard. It shows you the speed 
 
 Metrics are quantifiable measures that indicate the status and performance of a system. They can represent counts (like the number of requests), gauges (like the current memory usage), or histograms (like the distribution of request latencies).
 
-### Example
+#### Example
 
 In the context of your connected car, metrics might include:
 
@@ -44,7 +44,7 @@ Suppose your car starts behaving unusually. The "Check Engine" light comes on. Y
 
 Logs are like the car's black box recorder — detailed, timestamped records of events that happened while your system was running. They're invaluable for debugging and understanding system behavior.
 
-### Example
+#### Example
 
 When your connected car encounters a problem, it might generate logs like:
 
@@ -58,7 +58,7 @@ Finally, think about the various "events" while driving. The moment you start yo
 
 In software systems, events are significant occurrences that you want to keep track of. They are similar to logs but are typically used for more meaningful incidents.
 
-### Example
+#### Example
 
 For our connected car, notable events might include:
 

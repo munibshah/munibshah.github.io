@@ -19,9 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: The Observability Blog
-email: munibshah@munibshah.com
+email: me@munibshah.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This blog speaks about all things observability
+  This blog posts about all things observability
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://observe.munibshah.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: themunibshah
