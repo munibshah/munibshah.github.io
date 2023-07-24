@@ -1,30 +1,75 @@
 ---
 layout: post
-title: "Sample Post"
+title: "M.E.L.T. Metrics, Traces, Logs and Traces"
 date: 2023-07-23 14:37:19 -0700
-categories: jekyll update
+categories: Observability
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Let's talk about some fundamental concepts in understanding and monitoring your connected systems — traces, metrics, logs, and events; commonly known as M.E.L.T. We'll use an analogy that most of us can relate to — a modern, connected car. This way, we hope to simplify these complex concepts and provide insights into their use. Buckle up and let's hit the road!
 
-Jekyll requires blog post files to be named according to the following format:
+## Traces
 
-`YEAR-MONTH-DAY-title.MARKUP`
+Imagine you're driving from Point A to Point B. The entire journey you take represents a "trace". It's a single operation that includes multiple actions: starting the car, driving, making turns, and eventually stopping.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Similarly, in a software system, a trace is the entire path that a transaction or request takes through various services from start to finish. Each of these individual actions (like starting the car or making a turn) are called "spans".
 
-Jekyll also offers powerful support for code snippets:
+### Example
 
-{% highlight ruby %}
-def print_hi(name)
-puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Let's equate this to a feature in your connected car, say, requesting for roadside assistance. This request might initiate a trace which includes spans like:
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+- User activates the roadside assistance button.
+- A message is sent to the assistance service.
+- Service confirms the request and sends a tow truck.
+- User is notified about the truck's ETA.
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]: https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+These spans collectively form a trace, which allows us to follow the request and monitor its progress through the system.
+
+## Metrics
+
+While driving, you often glance at your car's dashboard. It shows you the speed of your car, the fuel level, engine temperature and more. These readings are analogous to "metrics" in a software system.
+
+Metrics are quantifiable measures that indicate the status and performance of a system. They can represent counts (like the number of requests), gauges (like the current memory usage), or histograms (like the distribution of request latencies).
+
+### Example
+
+In the context of your connected car, metrics might include:
+
+- **Speed:** The car's current speed, helping to monitor for safety and efficiency.
+- **Fuel level:** The amount of fuel remaining, which could help plan when to refill.
+- **Battery Health:** For electric cars, the current battery health or charge percentage would be crucial.
+
+## Logs
+
+Suppose your car starts behaving unusually. The "Check Engine" light comes on. You connect your car's computer system to a diagnostic tool, and it gives you a detailed report — those are the "logs".
+
+Logs are like the car's black box recorder — detailed, timestamped records of events that happened while your system was running. They're invaluable for debugging and understanding system behavior.
+
+### Example
+
+When your connected car encounters a problem, it might generate logs like:
+
+- An info log when you start the car.
+- A warning log when the fuel drops below a certain level.
+- An error log with details when the engine overheats.
+
+## Events
+
+Finally, think about the various "events" while driving. The moment you start your car, the moment you put on your seatbelt, or when your car collides with something — these significant incidents are events.
+
+In software systems, events are significant occurrences that you want to keep track of. They are similar to logs but are typically used for more meaningful incidents.
+
+### Example
+
+For our connected car, notable events might include:
+
+- The car's ignition is turned on.
+- Collision detected by the car's sensors.
+- Car reaches a set speed limit.
+
+By tracking such events, you can monitor specific activities and take necessary actions.
+
+## The Finish Line
+
+M.E.L.T provides a different view and insight into your system. The most effective observation strategy thus is the one that is able to correlate all of these elements. So ensure your monitoring toolkit is equipped to be able to provide you insights across the entire paradigm.
+
+Keep coding and driving safely!
