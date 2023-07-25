@@ -7,15 +7,15 @@ categories: Observability
 
 ![spacecraft](/assets/img/spacecraft.png)
 
-In this blog we will explore the solutions development aspect of the FSO platform. It serves as your one-stop-shop for monitoring all layers of your tech stack, effectively putting an end to the time-consuming task of manual log collection and parsing. Instead of diving deep into log data lakes, you can focus on what you do best - writing business logic.
+In this blog we will explore the solutions development aspect of Cisco's Full Stack Observability (FSO) platform. FSO serves as a one-stop-shop for monitoring all layers of your tech stack, effectively putting an end to the time-consuming task of manual log collection and parsing. Instead of trying to figure out where and how to store data, FSO allows developers to focus on what they do best - writing business logic.
 
-To understand different components of the solution, we will take the example of a sample application called Spacefleet. We will break it down into multiple solution components and understand how they come together to provide visibility at different layers of the application stack.
+To understand different components of the solution, we will take the example of a sample application called Spacefleet. We will break it down into solution components and understand how they can be modelled in FSO into entities, attributes and metric types. Once an application has been modelled, FSO expects to receive the MELT data in the expected format so that it can apply it's business logic and provide value
 
 ### Solution Package
 
-A solution package is a JSON file construct on FSO platform with multiple objects definitions. A solution package has core capabilities and you can pull in optional capabilities that solution developers have already built
+Applications in FSO are represented as solution pakages. A solution package is a JSON file construct with multiple objects definitions. It contains core capabilities that the platform provides. Users can also pull in optional capabilities that have been built on the platform as extensions.
 
-Here is a list of core cababilities that are available to developers:
+Below is a list of core cababilities that are available to developers:
 
 1. Dashui
 2. FMM
@@ -26,21 +26,11 @@ Here is a list of core cababilities that are available to developers:
 
 ### Entity
 
-An entity to any component or aspect of an application or system that can be monitored or measured. In our example `spacecraft` is an entity. An entitiy can have child entities such as
+An entity to any component or aspect of an application or system that can be monitored or measured. In our example `spacecraft` is an entity. An entitiy can also have associated entities such as the example below:
 
-```
-(Entities)
-spacecraft
-│
-└─room
-│     |
-│     └─ bridge_room
-└─torpedo_tube
-│
-└─shield
-│
-└─warp_drive
-```
+![Entity ERD](/assets/img/ERD-FSO.drawio.png)
+
+As shown above, we have the spacecraft entity that has child entities of room, torpedo_tube, shielf and warp drive.
 
 Below is an example of how entities are represented on the FSO Platform
 
