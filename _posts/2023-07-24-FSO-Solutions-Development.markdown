@@ -1,0 +1,200 @@
+---
+layout: post
+title: "Full Stack Solutions Development"
+date: 2023-07-22 14:37:19 -0700
+categories: Observability
+---
+
+![spacecraft](/assets/img/spacecraft.png)
+
+In this blog we will explore the solutions development aspect of the FSO platform. It serves as your one-stop-shop for monitoring all layers of your tech stack, effectively putting an end to the time-consuming task of manual log collection and parsing. Instead of diving deep into log data lakes, you can focus on what you do best - writing business logic.
+
+To understand different components of the solution, we will take the example of a sample application called Spacefleet. We will break it down into multiple solution components and understand how they come together to provide visibility at different layers of the application stack.
+
+### Solution Package
+
+A solution package is a JSON file construct on FSO platform with multiple objects definitions. A solution package has core capabilities and you can pull in optional capabilities that solution developers have already built
+
+Here is a list of core cababilities that are available to developers:
+
+1. Dashui
+2. FMM
+3. K8s
+4. Zodiac
+5. Codex
+6. Health Rule
+
+### Entity
+
+An entity to any component or aspect of an application or system that can be monitored or measured. In our example `spacecraft` is an entity. An entitiy can have child entities such as
+
+```
+(Entities)
+spacecraft
+│
+└─room
+│     |
+│     └─ bridge_room
+└─torpedo_tube
+│
+└─shield
+│
+└─warp_drive
+```
+
+Below is an example of how entities are represented on the FSO Platform
+
+```json
+{
+  "kind": "entity",
+  "name": "spacecraft",
+  "displayName": "Spacecraft",
+  "displayName": "Represents a spacecraft"
+}
+```
+
+#### Entity Attributes
+
+Attributes of an entity are those specific characteristics or properties of the entity that can be observed or measured. Examples can be `name, launch_date, Launch_vehicle, Mission_type`
+
+Below is an example of how entitiy attributes are represented on the FSO Platform
+
+```json
+{
+  "kind": "entity",
+  ...
+  "attributeDefinitions": {
+    "optimized": [
+        "spacefleet.spacecraft.name"
+        ],
+    "required": [
+        "spacefleet.spacecraft.name"
+        ],
+    "attributes": {
+        "spacefleet.spacecraft.name": {
+            "type": "string",
+            "description": "Name of the spacecraft"
+      }
+    }
+  }
+}
+```
+
+Attributes can be `required` or `optimized`. Optimized attributes are indexed. It is recommended to use if you need to build complex relationships through the attribute, or if your experience layer is going to send consideriable number of queries using the attribute.
+
+#### Entity Associations
+
+Used to create relationships based on compositions. Example compositions are `consists_of` or `uses`.
+
+Below is an example of how entitiy associations are represented on the FSO Platform
+
+```json
+{
+  "kind": "entity",
+  ...
+  "associationTypes": {
+    "common:consists_of": [
+        "${sys.solutionId}:room",
+        "${sys.solutionId}:torpedo_tube",
+        "${sys.solutionId}:shield",
+        "${sys.solutionId}:warp_drive",
+    ]
+      }
+}
+```
+
+Associations also support inheritance. So one entity can have a parent entity denoted by `"parentType"` attribute
+
+#### Entity Metric Types
+
+Associate the type of metrics you should expect from this entity. In our example for a spacecraft we may want to measure how many torpedoes do we have present, or what's our shield level. This can be represented on the FSO platform using the following syntax
+
+```json
+{
+  "kind": "entity",
+  ...
+  "metricTypes": [
+    "${sys.solutionId}:torpedo_count",
+    "${sys.solutionId}:shield_level",
+    "${sys.solutionId}:speed",
+    "${sys.solutionId}:earth_day",
+    "${sys.solutionId}:newsfeed_type"
+  ]
+}
+```
+
+#### Entity Event Types
+
+Events are defined similar to metrics since they are structured. The difference is the way events are measured and sent to the platform. In our example we capture an event when a torpedo is launched, or when a newsfeed item shows up.
+
+These events can be modeled on the platform as
+
+```json
+{
+  "kind": "entity",
+  ...
+  "eventTypes": [
+    "${sys.solutionId}:newsfeed",
+    "${sys.solutionId}:torpedoes_launched",
+    "${sys.solutionId}:torpedoes_reloaded"
+  ]
+}
+```
+
+### Event Types
+
+FSO Platform supports Metrics, Logs, Events and Traces. The upcoming section will provide more details on Events and Metrics since these are more structured. Traces are currently only supported on APM modules and will be added to this blog once the feature is available for solution development
+
+#### Events
+
+Events are structured and thus can be modelled. Here is a sample view of how an event `suggestion` looks like on the platform
+
+```json
+{
+  "kind": "event",
+  "name": "suggestion",
+  "displayName": "Suggestion",
+  "attributeDefinitions ": {
+    "attributes": {
+      "sender": {
+        "type": "string"
+      },
+      "suggestion_text": {
+        "type": "string"
+      },
+      "receiver": {
+        "type": "string"
+      },
+      "sensitive": {
+        "type": "boolean"
+      }
+    }
+  }
+}
+```
+
+#### Metrics
+
+Metrics are similar to events althogh they may contain much more attributes.
+
+Here is a sample view of how a metric `shield_level` might look like
+
+```json
+{
+  "kind": "metric",
+  "name": "shield_level",
+  "displayName": "Shield Level",
+  "description": "Shield level of a room or spacecraft",
+  "category": "current",
+  "contentType": "guage",
+  "type": "double",
+  "unit": "%",
+  "ingestGranularities ": [60]
+}
+```
+
+### MELT collection
+
+Metrics, Events, Logs and Traces need to be collected and sent to the platform. This can either be done by creating an Opentelemetry service that ingests OTEL data, or solution developers will need to create a service that reads this data, extracts telemetry and sends it to the platform.
+
+Applications can then utilize the Unified Query Engine to slide the data and build correlations or health rules.
