@@ -37,7 +37,7 @@ Cloud collectors are containers that run as cron tabs. For example you might wan
 
 Cloud Collectors are a way to download metrics from the cloud such as AWS. You will need to store AWS credentials in a secure manner using secrets. FSO platform allows you to define a tenant level secret in the Knowledge Store
 
-#### Open Teletry Ingestor
+#### Open Telemetry Ingestor
 
 Ingests MELT data in the Open Telemetry format using OTLP
 
