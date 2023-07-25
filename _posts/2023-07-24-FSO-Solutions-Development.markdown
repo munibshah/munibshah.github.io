@@ -26,11 +26,9 @@ Below is a list of core cababilities that are available to developers:
 
 ### Entity
 
-An entity to any component or aspect of an application or system that can be monitored or measured. In our example `spacecraft` is an entity. An entitiy can also have associated entities such as the example below:
+An entity to any component or aspect of an application or system that can be monitored or measured. In our example `spacecraft` is an entity.
 
-![Entity ERD](/assets/img/ERD-FSO.drawio.png)
-
-As shown above, we have the spacecraft entity that has child entities of room, torpedo_tube, shielf and warp drive.
+![Entity](/assets/img/ERD-FSO.drawio.png)
 
 Below is an example of how entities are represented on the FSO Platform
 
