@@ -5,7 +5,7 @@ date: 2023-07-24 14:37:19 -0700
 categories: Observability
 ---
 
-![FSO Platform Architecture](assets/img/FSOarch.png)
+![FSO Platform Architecture](/assets/img/FSOarch.png)
 
 ### MELT Store
 
