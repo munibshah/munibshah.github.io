@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Full Stack Observability Platform Architecture"
-date: 2023-07-20 14:37:19 -0700
+date: 2023-07-22 14:37:19 -0700
 categories: Observability
 ---
 

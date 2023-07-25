@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Span vs Traces: with a Car Analogy"
-date: 2023-07-23 14:37:19 -0700
+date: 2023-07-16 14:37:19 -0700
 categories: Observability
 ---
 
