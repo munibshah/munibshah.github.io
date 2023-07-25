@@ -5,7 +5,7 @@ date: 2023-07-24 14:37:19 -0700
 categories: Observability
 ---
 
-![spacecraft](/assets/img/spacecraft.png)
+![spacecraft](/assets/img/spacecraft.jpg)
 
 In this blog we will explore the solutions development aspect of Cisco's Full Stack Observability (FSO) platform. FSO serves as a one-stop-shop for monitoring all layers of your tech stack, effectively putting an end to the time-consuming task of manual log collection and parsing. Instead of trying to figure out where and how to store data, FSO allows developers to focus on what they do best - writing business logic.
 

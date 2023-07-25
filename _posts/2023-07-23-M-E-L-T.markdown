@@ -5,6 +5,8 @@ date: 2023-07-17 14:37:19 -0700
 categories: Observability
 ---
 
+![MELT](/assets/img/MELT.jpg)
+
 Let's talk about some fundamental concepts in understanding and monitoring your connected systems — traces, metrics, logs, and events; commonly known as M.E.L.T. We'll use an analogy that most of us can relate to — a modern, connected car. This way, we hope to simplify these complex concepts and provide insights into their use. Buckle up and let's hit the road!
 
 ## Traces

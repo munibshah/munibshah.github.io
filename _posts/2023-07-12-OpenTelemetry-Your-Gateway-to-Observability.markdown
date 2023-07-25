@@ -5,7 +5,7 @@ date: 2023-07-12 14:37:19 -0700
 categories: Observability
 ---
 
-Hello there, observability enthusiasts! Today, we dive into the world of OpenTelemetry, a fantastic tool that has made waves in the domain of application monitoring.
+![Otel](/assets/img/Otel.png)
 
 ## What is OpenTelemetry?
 

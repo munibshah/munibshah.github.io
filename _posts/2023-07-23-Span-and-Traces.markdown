@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "Span vs Traces: with a Car Analogy"
+title: "Span vs Traces with a connected Car"
 date: 2023-07-16 14:37:19 -0700
 categories: Observability
 ---
+
+![Span](/assets/img/SPAN.jpg)
 
 # Span vs Traces: with a Car Analogy
 

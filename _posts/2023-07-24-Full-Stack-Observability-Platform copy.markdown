@@ -17,7 +17,7 @@ Allows developers to store non-MELT data models. Acts as the brain of the platfo
 
 #### ABAC/RBAC
 
-Solution developers get to defines roles and permissions
+Solution developers get to define roles and permissions for existing and extended capabilities of the platform
 
 #### Entity Model
 
@@ -25,17 +25,17 @@ MELT data is attached to an entity which ties it to a larger entity model. There
 
 #### Subscription Model
 
-As a solution developer you get to define which entities do you want to apply your solution to. You also get to choose to only allow your insights if customers have subscribed to your license.
+Solution develops get to define which entities do they want to apply their solution to. They also get to choose to only allow access to views of their application if customers have subscribed to their service
 
 #### Custom APIs
 
-Add containers onto the platform (sort of like FaaS). So as a solution's developer you may have a NODE server to create and delete investigation by talking to the Knowledge store. You can put your whole node server on the platform and you extend the platform APIs along with the roles required to run the APIs
+Add containers onto the platform (sort of like FaaS). So as a solution's developer you may have a Node server to create and delete investigation by talking to the Knowledge store. You can put your whole node server on the platform as a container and extend the platform APIs along with the roles required to run the APIs
 
 #### Cloud Collector
 
 Cloud collectors are containers that run as cron tabs. For example you might want to have a metric on the platform that shows a value everytime someone checks in code to a Git repository. You will create an entity for the Git repository and create a commit metric on the entity. Every commit will add to the metric.
 
-Cloud Collectors are a way where you can download your metrics from the cloud such as AWS. You will need to store AWS credentials in a secure manner using secrets. FSO platform allows you to define a tenant level secret in the Knowledge Store
+Cloud Collectors are a way to download metrics from the cloud such as AWS. You will need to store AWS credentials in a secure manner using secrets. FSO platform allows you to define a tenant level secret in the Knowledge Store
 
 #### Open Teletry Ingestor
 
@@ -47,4 +47,4 @@ Solution Developers can define health rules for thresholds or correlation
 
 #### UQL
 
-Unified Querying Language that is used to query data from the MELT and Knowledge Store
+Unified Query Language that is used to query data from the MELT and Knowledge Store
