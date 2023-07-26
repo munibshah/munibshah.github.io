@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Full Stack Solutions Development"
+title: "Full Stack Observability for Developers"
 date: 2023-07-24 14:37:19 -0700
 categories: Observability
 ---
@@ -9,11 +9,11 @@ categories: Observability
 
 In this blog we will explore the solutions development aspect of Cisco's Full Stack Observability (FSO) platform. FSO serves as a one-stop-shop for monitoring all layers of your tech stack, effectively putting an end to the time-consuming task of manual log collection and parsing. Instead of trying to figure out where and how to store data, FSO allows developers to focus on what they do best - writing business logic.
 
-To understand different components of the solution, we will take the example of a sample application called Spacefleet. We will break it down into solution components and understand how they can be modelled in FSO into entities, attributes and metric types. Once an application has been modelled, FSO expects to receive the MELT data in the expected format so that it can apply it's business logic and provide value
+To understand different components of the solution, we will take the example of a sample application called Spacefleet. We will break it down into solution components and understand how they can be modelled in FSO into entities, attributes and metric types. Once an application has been modelled, FSO expects to receive the MELT data in the expected format so that applications can apply business logic and create value for users of the platform
 
 ### Solution Package
 
-Applications in FSO are represented as solution pakages. A solution package is a JSON file construct with multiple objects definitions. It contains core capabilities that the platform provides. Users have the ability tii pull in optional capabilities that have been built on the platform as extensions.
+Applications in FSO are represented as solution pakages. A solution package is a JSON file construct with multiple objects definitions. It contains core capabilities that the platform provides. Users have the ability to pull in optional capabilities that have been built on the platform as extensions.
 
 Below is a list of core cababilities that are available to developers:
 
