@@ -13,7 +13,7 @@ categories: Observability
 
 In the world of microservices, observability is the key to understanding the behavior and performance of our systems. From Jaeger's role in distributed tracing to Prometheus's efficient metrics collection, open-source tools have revolutionized how we observe our systems. But, what if we could push the boundaries even further?
 
-Let's talk about Cisco's FSO platform that takes observability game to the next level - a platform that binds MELT (Metrics, Events, Logs, and Traces) and provides an industry definig customizable map of relationships to empowers developers to create new experiences.
+Let's talk about Cisco's FSO platform that takes observability game to the next level - a platform that binds MELT (Metrics, Events, Logs, and Traces) and provides an industry definig customizable map of relationships that empowers developers to create new experiences.
 
 ## Unprecedented Power of binding MELT
 
