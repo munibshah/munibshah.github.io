@@ -17,21 +17,21 @@ Let's talk about Cisco's FSO platform that takes observability game to the next 
 
 ## Unprecedented Power of binding MELT
 
-This platform goes beyond the typical MELT way of analyzing your systems. It introduces a contexual model to bind MELT data to entities and relationships. Now, instead of sifting through a sea of independent data points, you can directly associate your data, reduce noise and go straight to insights.
+This platform goes beyond the typical MELT way of analyzing your systems. It introduces a contexual model to bind MELT data to entities and relationships. Instead of sifting through a sea of independent data points, you can directly associate your data, reduce noise and go straight to insights.
 
 ## Visualize Entity Maps
 
-With Cisco FSO, you can visualize and customize a schema map of relationships in your system. This feature brings an unprecedented level of clarity to complex system architectures. Instead of spending countless hours trying to figure out how different entities are related, you can now view these relationships at a glance.
+With Cisco FSO, you can visualize and customize a schema map of relationships in your system. This feature brings clarity to complex system architectures. Instead of spending countless hours trying to figure out how entities and hierarchies are related, you can now view these relationships at a glance.
 
 Moreover, these relationships cover a wide range of association types, allowing you to model and understand complex inter-dependencies in your systems.
 
 ## Contextualize and Correlate
 
-By leveraging a relationships model, this platform allows users to correlate their data. This ability helps in reducing the time to discover issues significantly. When data from different entities is logically connected and analyzed, finding patterns, anomalies, or potential problems becomes faster and more accurate.
+By leveraging a relationships model, this platform allows users to correlate data across MELT. This ability helps in reducing the time to discover issues significantly. When data from different entities is logically connected and analyzed, finding patterns, anomalies, or potential problems becomes faster and more accurate.
 
 ## Create your own subscriptions
 
-One of the unique benefits of this platform is that it allows developers to create and monetize their intellectual capital. Built on a flexible and robust framework, developers can build customized tools, features, or enhancements, which can be licensed with a subscription. This platform does not just provide tools for system observability; it opens up an entirely new avenue for developers to earn from their innovations and expertise.
+One of the unique benefits of this platform is that it allows developers to create and monetize their intellectual capital. Built on a flexible and robust framework, developers can build tools, features, or enhancements, which can be licensed with a subscription. This platform does not just provide Cisco products for system observability; it opens up an entirely new avenue for developers to innovate and monetize from their expertise.
 
 ## The Future of Observability
 
