@@ -17,7 +17,7 @@ Let's talk about Cisco's FSO platform that takes observability game to the next 
 
 ## Unprecedented Power of binding MELT
 
-This platform goes beyond the typical MELT way of analyzing your systems. It introduces a contexual model to bind MELT data to entities and relationships. Instead of sifting through a sea of independent data points, you can directly associate your data, reduce noise and go straight to insights.
+This platform goes beyond the typical MELT way of analyzing your systems. It introduces a contexual model to bind MELT data with entities and relationships. Instead of sifting through a sea of independent data points, you can directly associate your data, reduce noise and go straight to insights.
 
 ## Visualize Entity Maps
 
