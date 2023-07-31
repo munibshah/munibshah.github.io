@@ -187,4 +187,4 @@ Here is a sample view of how a metric `shield_level` might look like
 
 Metrics, Events, Logs and Traces need to be collected and sent to the platform. This can either be done by creating an Opentelemetry service that ingests OTEL data, or solution developers will need to create a service that reads this data, extracts telemetry and sends it to the platform.
 
-Applications can then utilize the Unified Query Engine to slide the data and build correlations or health rules.
+Applications can then utilize the Unified Query Engine to access the data and build correlations or health rules.
