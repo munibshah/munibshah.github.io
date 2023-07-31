@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Who's who of Cisco Full Stack Observability Platform"
-date: 2023-07-29 14:37:19 -0700
+date: 2023-07-30 14:37:19 -0700
 categories: Observability
 ---
 
