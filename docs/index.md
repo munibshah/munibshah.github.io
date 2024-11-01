@@ -1,6 +1,6 @@
 # Scalable Firewall Design
 
-In an ever-evolving digital landscape, designing a scalable firewall architecture is crucial for robust network security and performance.
+In an ever-evolving digital landscape, designing a scalable firewall architecture is crucial for robust network security and performance
 
 ## Understanding the Necessity of Scalable Firewall Architecture
 
