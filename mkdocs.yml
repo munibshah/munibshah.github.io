@@ -33,7 +33,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/Themunibshah
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/munibshah/
+      link: https://www.linkedin.com/in/munib-shah/
 
 markdown_extensions:
   - pymdownx.highlight:
