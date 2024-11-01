@@ -1,0 +1,361 @@
+site_name: containerlab
+nav:
+  - Home: index.md
+  - Installation: install.md
+  - Quick start: quickstart.md
+  - Kinds: manual/kinds/index.md
+  - User manual:
+      - Topology definition: manual/topo-def-file.md
+      - Nodes: manual/nodes.md
+      - Kinds:
+          - manual/kinds/index.md
+          - Nokia:
+              - Nokia SR Linux: manual/kinds/srl.md
+              - Nokia SR OS: manual/kinds/vr-sros.md
+          - Arista:
+              - Arista cEOS: manual/kinds/ceos.md
+              - Arista vEOS: manual/kinds/vr-veos.md
+          - Cisco:
+              - Cisco XRd: manual/kinds/xrd.md
+              - Cisco XRv9k: manual/kinds/vr-xrv9k.md
+              - Cisco XRv: manual/kinds/vr-xrv.md
+              - Cisco CSR1000v: manual/kinds/vr-csr.md
+              - Cisco Nexus 9000v: manual/kinds/vr-n9kv.md
+              - Cisco 8000: manual/kinds/c8000.md
+              - Cisco c8000v: manual/kinds/vr-c8000v.md
+              - Cisco Catalyst 9000v: manual/kinds/vr-cat9kv.md
+              - Cisco IOL: manual/kinds/cisco_iol.md
+              - Cisco FTDv: manual/kinds/vr-ftdv.md
+          - Juniper:
+              - Juniper cRPD: manual/kinds/crpd.md
+              - Juniper vMX: manual/kinds/vr-vmx.md
+              - Juniper vQFX: manual/kinds/vr-vqfx.md
+              - Juniper vSRX: manual/kinds/vr-vsrx.md
+              - Juniper vJunos-router: manual/kinds/vr-vjunosrouter.md
+              - Juniper vJunos-switch: manual/kinds/vr-vjunosswitch.md
+              - Juniper vJunosEvolved: manual/kinds/vr-vjunosevolved.md
+          - Cumulus VX: manual/kinds/cvx.md
+          - Aruba AOS-CX: manual/kinds/vr-aoscx.md
+          - SONiC:
+              - Container: manual/kinds/sonic-vs.md
+              - VM: manual/kinds/sonic-vm.md
+          - Dell:
+              - FTOS10v: manual/kinds/vr-ftosv.md
+              - Enterprise SONiC: manual/kinds/dell_sonic.md
+          - MikroTik RouterOS: manual/kinds/vr-ros.md
+          - Huawei VRP: manual/kinds/huawei_vrp.md
+          - IPInfusion OcNOS: manual/kinds/ipinfusion-ocnos.md
+          - OpenBSD: manual/kinds/openbsd.md
+          - FreeBSD: manual/kinds/freebsd.md
+          - Keysight IXIA-C One: manual/kinds/keysight_ixia-c-one.md
+          - Ostinato: manual/kinds/ostinato.md
+          - Check Point Cloudguard: manual/kinds/checkpoint_cloudguard.md
+          - Fortinet Fortigate: manual/kinds/fortinet_fortigate.md
+          - Palo Alto PAN: manual/kinds/vr-pan.md
+          - KinD: manual/kinds/k8s-kind.md
+          - Linux bridge: manual/kinds/bridge.md
+          - Linux container: manual/kinds/linux.md
+          - Generic VM: manual/kinds/generic_vm.md
+          - RARE/freeRtr: manual/kinds/rare-freertr.md
+          - Openvswitch bridge: manual/kinds/ovs-bridge.md
+          - External container: manual/kinds/ext-container.md
+          - Host: manual/kinds/host.md
+      - Configuration artifacts: manual/conf-artifacts.md
+      - Network wiring concepts: manual/network.md
+      - Packet capture & Wireshark: manual/wireshark.md
+      - VM based routers integration: manual/vrnetlab.md
+      - Clabernetes:
+          - manual/clabernetes/index.md
+          - Install: manual/clabernetes/install.md
+          - Quickstart: manual/clabernetes/quickstart.md
+          - Packet capture in c9s: manual/clabernetes/pcap.md
+      - Node filtering: manual/node-filtering.md
+      - Publish ports: manual/published-ports.md
+      - Multi-node labs: manual/multi-node.md
+      - Certificate management: manual/cert.md
+      - Inventory: manual/inventory.md
+      - Image management: manual/images.md
+      - Labs and Codespaces: manual/codespaces.md
+      - Link Impairments: manual/impairments.md
+      - Developers guide:
+          - manual/dev/index.md
+          - Documentation: manual/dev/doc.md
+          - Testing: manual/dev/test.md
+          - Debugging: manual/dev/debug.md
+  - Command reference:
+      - deploy: cmd/deploy.md
+      - destroy: cmd/destroy.md
+      - inspect: cmd/inspect.md
+      - save: cmd/save.md
+      - exec: cmd/exec.md
+      - generate: cmd/generate.md
+      - graph: cmd/graph.md
+      - tools:
+          - disable-tx-offload: cmd/tools/disable-tx-offload.md
+          - veth:
+              - create: cmd/tools/veth/create.md
+          - vxlan:
+              - create: cmd/tools/vxlan/create.md
+              - delete: cmd/tools/vxlan/delete.md
+          - cert:
+              - ca:
+                  - create: cmd/tools/cert/ca/create.md
+              - sign: cmd/tools/cert/sign.md
+          - netem:
+              - set: cmd/tools/netem/set.md
+              - show: cmd/tools/netem/show.md
+      - completions: cmd/completion.md
+  - Lab examples:
+      - About: lab-examples/lab-examples.md
+      - Single SR Linux node: lab-examples/single-srl.md
+      - Two SR Linux nodes: lab-examples/two-srls.md
+      - 3-nodes Clos fabric: lab-examples/min-clos.md
+      - 5-stage Clos fabric: lab-examples/min-5clos.md
+      - Nokia SR Linux and Arista cEOS: lab-examples/srl-ceos.md
+      - Nokia SR Linux and Juniper cRPD: lab-examples/srl-crpd.md
+      - Nokia SR Linux and SONiC: lab-examples/srl-sonic.md
+      - External bridge capability: lab-examples/ext-bridge.md
+      - WAN topology: lab-examples/wan.md
+      - Peering lab: lab-examples/peering-lab.md
+      - Nokia SR Linux and Nokia SR OS: lab-examples/vr-sros.md
+      - Nokia SR Linux and Juniper vMX: lab-examples/vr-vmx.md
+      - Nokia SR Linux and Cisco XRd: lab-examples/srl-xrd.md
+      - Nokia SR Linux and Cisco XRv9k: lab-examples/vr-xrv9k.md
+      - Nokia SR Linux and Cisco XRv: lab-examples/vr-xrv.md
+      - Nokia SR Linux and FRR: lab-examples/srl-frr.md
+      - Nokia SR Linux and Juniper vJunos-switch: lab-examples/srl-vjunos-switch.md
+      - Nokia SR Linux and Juniper vJunosEvolved: lab-examples/srl-vjunosevolved.md
+      - FRR: lab-examples/frr01.md
+      - Cumulus Linux and FRR: lab-examples/cvx01.md
+      - Cumulus Linux (docker runtime) and Host: lab-examples/cvx02.md
+      - BGP VPLS between Nokia and Juniper: lab-examples/bgp-vpls-nok-jun.md
+      - Keysight IXIA-C and Nokia SR Linux: lab-examples/ixiacone-srl.md
+      - Ostinato and Nokia SR Linux: lab-examples/ost-srl.md
+      - Multi-node labs: lab-examples/multinode.md
+      - RARE/freeRtr: lab-examples/rare-freertr.md
+      - Juniper vSRX: lab-examples/vsrx01.md
+      - OpenBSD: lab-examples/openbsd01.md
+      - Cisco FTDv: lab-examples/ftdv01.md
+      - Templated labs:
+          - Leaf-spine topology: lab-examples/templated01.md
+          - 5-stage Clos topology: lab-examples/templated02.md
+      - Generic VM: lab-examples/generic_vm01.md
+  - Release notes:
+      - "0.59": rn/0.59.md
+      - "0.58": rn/0.58.md
+      - "0.57": rn/0.57.md
+      - "0.56": rn/0.56.md
+      - "0.55": rn/0.55.md
+      - "0.54": rn/0.54.md
+      - "0.53": rn/0.53.md
+      - "0.52": rn/0.52.md
+      - "0.51": rn/0.51.md
+      - "0.50": rn/0.50.md
+      - "0.49": rn/0.49.md
+      - "0.48": rn/0.48.md
+      - "0.47": rn/0.47.md
+      - "0.46": rn/0.46.md
+      - "0.45": rn/0.45.md
+      - "0.44": rn/0.44.md
+      - "0.43": rn/0.43.md
+      - "0.42": rn/0.42.md
+      - "0.41": rn/0.41.md
+      - "0.40": rn/0.40.md
+      - "0.39": rn/0.39.md
+      - "0.38": rn/0.38.md
+      - "0.37": rn/0.37.md
+      - "0.36": rn/0.36.md
+      - "0.35": rn/0.35.md
+      - "0.34": rn/0.34.md
+      - "0.33": rn/0.33.md
+      - "0.32": rn/0.32.md
+      - "0.31": rn/0.31.md
+      - "0.30": rn/0.30.md
+      - "0.29": rn/0.29.md
+      - "0.28": rn/0.28.md
+      - "0.27": rn/0.27.md
+      - "0.26": rn/0.26.md
+      - "0.25": rn/0.25.md
+      - "0.24": rn/0.24.md
+      - "0.23": rn/0.23.md
+      - "0.22": rn/0.22.md
+      - "0.21": rn/0.21.md
+      - "0.20": rn/0.20.md
+      - 0.19: rn/0.19.md
+      - 0.18: rn/0.18.md
+      - 0.17: rn/0.17.md
+      - 0.16: rn/0.16.md
+      - 0.15: rn/0.15.md
+      - 0.14.4: rn/0.14.4.md
+      - 0.14.3: rn/0.14.3.md
+      - 0.14.2: rn/0.14.2.md
+      - 0.14.1: rn/0.14.1.md
+      - 0.14.0: rn/0.14.0.md
+      - 0.13.0: rn/0.13.0.md
+      - 0.12.0: rn/0.12.0.md
+      - 0.11.0: rn/0.11.0.md
+  - Community: community.md
+
+site_author: Roman Dodin
+site_description: >-
+  Containerlab deploys docker based meshed lab topologies
+# Repository
+repo_name: srl-labs/containerlab
+repo_url: https://github.com/srl-labs/containerlab
+site_url: "https://containerlab.dev/"
+edit_uri: "edit/main/docs/"
+theme:
+  name: material
+  custom_dir: docs/overrides
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  features:
+    - navigation.top
+    # - navigation.instant
+    - navigation.tabs
+    - search.suggest
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.action.edit
+    - toc.follow
+    - content.tooltips
+    - navigation.indexes
+    - content.footnote.tooltips
+
+  language: en
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: cyan
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: cyan
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  font:
+    text: Google Sans
+    code: Fira Mono
+  icon:
+    logo: fontawesome/solid/flask
+    repo: fontawesome/brands/github
+    edit: material/file-edit-outline
+  favicon: images/flask.svg
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-\_]'
+  - minify:
+      minify_html: true
+  - redirects:
+      redirect_maps:
+        lab-examples/tls-cert.md: https://clabs.netdevops.me/security/gnmitls/
+        lab-examples/ixp-lab.md: lab-examples/peering-lab.md
+  #- typeset
+  - glightbox
+  - macros:
+      j2_block_start_string: "[[[%"
+      j2_block_end_string: "%]]]"
+      j2_variable_start_string: "[[["
+      j2_variable_end_string: "]]]"
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hellt
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ntdvps
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/vAyddtaEV9
+  consent:
+    title: Cookie consent
+    consent:
+    actions:
+      - accept
+      - manage
+      - reject
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  analytics:
+    provider: google
+    property: G-368XR9X5MG
+
+copyright: >
+  <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.87 9.5C20.6 9 20 9 20 9h-2V8c0-1-1-1-1-1h-2V6c0-1-1-1-1-1h-1V3c0-1-1-1-1-1a9 9 0 1 0 9 9c0-.5-.04-1-.13-1.5M6.5 12c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8  10.5 7.33 12 6.5 12M8 6.5C8 5.67 8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8 8 7.33 8 6.5M11 18c-.83 0-1.5-.67-1.5-1.5S10.17 15 11 15s1.5.67 1.5 1.5S11.83 18 11 18m.5-5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5m5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5M7 22h2v2H7v-2m4 0h2v2h-2v-2m4 0h2v2h-2v-2Z"></path></svg></span> <a href="#__consent">Cookie settings</a>
+
+extra_css:
+  - stylesheets/extra.css
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - md_in_html
+  - toc:
+      permalink: "#"
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      line_spans: __span
+      anchor_linenums: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: srl-labs
+      repo: containerlab
+  - pymdownx.mark
+  - pymdownx.smartsymbols:
+      fractions: false
+  - pymdownx.snippets:
+      check_paths: true
+      dedent_subsections: true
+      url_download: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.blocks.tab:
+      alternate_style: true
+  - pymdownx.blocks.admonition
+  - pymdownx.blocks.definition
+  - pymdownx.blocks.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
